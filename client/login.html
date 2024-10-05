@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Németh Gábor Hangszerbolt 2024 - Login</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-color: rgb(232, 233, 243);
+            background-image: linear-gradient(135deg, rgba(232, 233, 243, 1) 25%, transparent 25%, transparent 50%, rgba(232, 233, 243, 1) 50%, rgba(232, 233, 243, 1) 75%, transparent 75%, transparent);
+        }
+
+        .card {
+            background-color: rgba(56, 56, 56, 0.8) !important;
+        }
+
+        .card:hover {
+            background-color: rgba(0, 0, 0, 0.8) !important;
+        }
+
+        .card-body {
+            color: #fff !important;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbarBg">
+        <div class="container text-center">
+            <a class="navbar-brand navbarColor mx-5" href="index.html">GUITARS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mx-5">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="loginLink" aria-current="page"
+                            href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" aria-current="page" href="index.html">Main</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="newGuitarLink" aria-current="page"
+                            href="newGuitar.html">New Guitar
+                            Upload</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="updateGuitarLink" aria-current="page"
+                            href="updateGuitar.html">Update
+                            Guitar</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="deleteGuitarLink" aria-current="page"
+                            href="delGuitar.html">Delete
+                            Guitar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-12">
+                <h2 class="my-4">LOGIN</h2>
+
+
+                <form id="loginForm">
+                    <p><strong>Felhasználónév:</strong> admin</p>
+                    <p><strong>Jelszó:</strong> password123</p>
+                    <label class="form-label text-black" for="username">Username:</label>
+                    <input class="form-control" type="text" id="username" name="username" required><br><br>
+
+                    <label class="form-label text-black" for="password">Password:</label>
+                    <input class="form-control" type="password" id="password" name="password" required><br><br>
+
+                    <button class="btn btn-dark" type="submit">Login</button>
+                    <p class="my-3">A gitárok feltöltéséhez, módosításához és törléséhez, <strong>kérjük jelentkezzen be!</strong></p>
+                </form>
+
+                <h3 class="py-5" id="message"></h3>
+                <img width="250" id="messagePIC" src="../images/lespaul.png" alt="Les Paul"><br>
+
+
+                <!-- Logout gomb, kezdetben rejtve -->
+                <button id="logoutButton" class="btn btn-danger my-4" style="display:none;">Logout</button>
+
+
+            </div>
+        </div>
+    </div>
+
+
+    <footer style="margin-top: 50px;" class="navbarBg text-center">
+        <h3 class="navbarColor">Németh Gábor Hangszerbolt 2024</h3>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="login.js"></script>
+</body>
+
+</html>

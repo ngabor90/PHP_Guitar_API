@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Németh Gábor Hangszerbolt 2024 - UpdateGuitar</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url(../images/gibson.jpg);
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar navbar-expand-lg navbarBg">
+        <div class="container text-center">
+            <a class="navbar-brand navbarColor mx-5" href="index.html">GUITARS</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto mx-5">
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="loginLink" aria-current="page" href="login.html">LOGIN</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" aria-current="page" href="index.html">Main</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="newGuitarLink" aria-current="page" href="newGuitar.html">New Guitar
+                            Upload</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="updateGuitarLink" aria-current="page" href="updateGuitar.html">Update
+                            Guitar</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link active navbarColor" id="deleteGuitarLink" aria-current="page" href="delGuitar.html">Delete
+                            Guitar</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <h2 class="my-5 text-white">UPDATE GUITAR</h2>
+        <form id="id-form">
+            <div class="mb-3">
+                <label for="id" class="form-label">Guitar ID</label>
+                <input type="number" class="form-control" id="id" min="1" required>
+            </div>
+            <button type="submit" class="btn btn-secondary my-3">Search</button>
+        </form>
+    </div>
+
+    <div class="container">
+        <form id="update-form">
+            <div class="mb-3">
+                <label for="name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+                <label for="type" class="form-label">Type</label>
+                <input type="text" class="form-control" id="type" required>
+            </div>
+            <div class="mb-3">
+                <label for="body" class="form-label">Body</label>
+                <input type="text" class="form-control" id="body" required>
+            </div>
+            <div class="mb-3">
+                <label for="neckProfile" class="form-label">Neck Profile</label>
+                <input type="text" class="form-control" id="neckProfile" required>
+            </div>
+            <div class="mb-3">
+                <label for="fretsSize" class="form-label">Frets Size</label>
+                <input type="text" class="form-control" id="fretsSize" required>
+            </div>
+            <div class="mb-3">
+                <label for="fretCount" class="form-label">Fret Count</label>
+                <input type="number" class="form-control" id="fretCount" required>
+            </div>
+            <div class="mb-3">
+                <label for="bridgePU" class="form-label">Bridge Pickup</label>
+                <input type="text" class="form-control" id="bridgePU" required>
+            </div>
+            <div class="mb-3">
+                <label for="neckPU" class="form-label">Neck Pickup</label>
+                <input type="text" class="form-control" id="neckPU">
+            </div>
+            <div class="mb-3">
+                <label for="image_url" class="form-label">Image URL</label>
+                <input type="text" class="form-control" id="image_url" required>
+            </div>
+            <div class="mb-3">
+                <label for="price" class="form-label">Price ($)</label>
+                <input type="number" class="form-control" id="price" step="0.01" required>
+            </div>
+            <div class="mb-3">
+                <div class="mb-3">
+                    <label for="storeno" class="form-label">Store No</label>
+                    <select id="storeno" class="form-control" required></select>
+                </div>
+            </div>
+            <button type="submit" class="btn btn-dark my-4">Update</button>
+        </form>
+    </div>
+
+    <footer class="navbarBg text-center">
+        <h3 class="navbarColor">Németh Gábor Hangszerbolt 2024</h3>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz"
+        crossorigin="anonymous"></script>
+    <script src="updateGuitar.js"></script>
+</body>
+
+</html>
