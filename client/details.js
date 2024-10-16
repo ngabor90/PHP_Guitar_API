@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
         return;
     }
 
-    const apiUrl = `http://localhost/SzakkepesitoVizsga/index.php?method=getguitar&id=${id}`;
+    const apiUrl = `https://guitarapi.eu/index.php?method=getguitar&id=${id}`;
 
     fetch(apiUrl)
         .then(response => {

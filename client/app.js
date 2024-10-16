@@ -1,5 +1,5 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const apiUrl = 'http://localhost/SzakkepesitoVizsga/index.php?method=getguitars';
+    const apiUrl = 'https://guitarapi.eu/index.php?method=getguitars';
 
     fetch(apiUrl)
         .then(response => response.json())

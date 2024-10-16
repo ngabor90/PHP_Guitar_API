@@ -1,10 +1,13 @@
 RewriteEngine On
-RewriteCond %{HTTP_HOST} ^localhost$
-RewriteRule ^$ /Guitar/client/ [L,R=301]
 
+# Amennyiben a domain az 'guitarapi.eu', akkor továbbirányít a /client könyvtárra
+RewriteCond %{HTTP_HOST} ^(www\.)?guitarapi\.eu$ [NC]
+RewriteRule ^$ /client/ [L,R=301]
 
 <IfModule mod_headers.c>
-    Header set Access-Control-Allow-Origin "http://localhost"
+    # Az Access-Control-Allow-Origin fejléc beállítása HTTPS-re
+    Header set Access-Control-Allow-Origin "https://guitarapi.eu"
     Header set Access-Control-Allow-Methods "GET, POST, PUT, DELETE, OPTIONS"
     Header set Access-Control-Allow-Headers "Content-Type, Authorization"
+    Header set Access-Control-Allow-Credentials "true"
 </IfModule>

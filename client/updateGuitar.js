@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         const guitarId = document.getElementById('id').value;
 
         try {
-            const response = await fetch(`http://localhost/SzakkepesitoVizsga/index.php?method=getguitar&id=${guitarId}`);
+            const response = await fetch(`https://guitarapi.eu/index.php?method=getguitar&id=${guitarId}`);
             const data = await response.json();
 
             if (data.error) {
@@ -61,7 +61,7 @@ document.addEventListener('DOMContentLoaded', () => {
         };
 
         try {
-            const response = await fetch(`http://localhost/SzakkepesitoVizsga/index.php?method=modguitar`, {
+            const response = await fetch(`https://guitarapi.eu/index.php?method=modguitar`, {
                 method: 'PUT',
                 headers: {
                     'Content-Type': 'application/json',
@@ -86,7 +86,7 @@ document.addEventListener('DOMContentLoaded', () => {
     // Store-ok betöltése és az aktuális kiválasztása
     async function loadStores(selectedStore) {
         try {
-            const response = await fetch('http://localhost/SzakkepesitoVizsga/index.php?method=getstorenos');
+            const response = await fetch('https://guitarapi.eu/index.php?method=getstorenos');
             const stores = await response.json();
 
             if (!Array.isArray(stores)) {

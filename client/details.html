@@ -14,41 +14,55 @@
             background-color: rgb(232, 233, 243);
             background-image: linear-gradient(135deg, rgba(232, 233, 243, 1) 25%, transparent 25%, transparent 50%, rgba(232, 233, 243, 1) 50%, rgba(232, 233, 243, 1) 75%, transparent 75%, transparent);
         }
+
+        .navbarColor{
+            color: #fff !important;
+        }
+
+        .navbarColor:hover {
+            color: #818080 !important;
+        }
     </style>
 </head>
 
 <body>
     <nav class="navbar navbar-expand-lg navbarBg">
         <div class="container text-center">
-            <a class="navbar-brand navbarColor mx-5" href="index.html">GUITARS</a>
+            <a class="navbar-brand navbarColor" href="index.html"><img src="../images/lespaul.png" width="60" alt="Guitar">GUITARS</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                 aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto mx-5">
-                    <li class="nav-item mx-3">
-                        <a class="nav-link active navbarColor" id="loginLink" aria-current="page" href="login.html">LOGIN</a>
-                    </li>
+                <!-- Mobil nézetben középre igazítás -->
+                <ul class="navbar-nav ms-auto mx-5 text-center w-100 text-lg-start">
                     <li class="nav-item mx-3">
                         <a class="nav-link active navbarColor" aria-current="page" href="index.html">Main</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active navbarColor" id="newGuitarLink" aria-current="page" href="newGuitar.html">New Guitar
+                        <a class="nav-link navbarColor" id="newGuitarLink" aria-current="page" href="newGuitar.html">New
+                            Guitar
                             Upload</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active navbarColor" id="updateGuitarLink" aria-current="page" href="updateGuitar.html">Update
+                        <a class="nav-link navbarColor" id="updateGuitarLink" aria-current="page"
+                            href="updateGuitar.html">Update
                             Guitar</a>
                     </li>
                     <li class="nav-item mx-3">
-                        <a class="nav-link active navbarColor" id="deleteGuitarLink" aria-current="page" href="delGuitar.html">Delete
+                        <a class="nav-link navbarColor" id="deleteGuitarLink" aria-current="page"
+                            href="delGuitar.html">Delete
                             Guitar</a>
+                    </li>
+                    <li class="nav-item mx-3">
+                        <a class="nav-link navbarColor" id="loginLink" aria-current="page" href="login.html"><strong
+                                class="login">LOGIN</strong></a>
                     </li>
                 </ul>
             </div>
         </div>
     </nav>
+    
 
     <div class="container mt-4">
         <h1>DETAILS</h1>
@@ -71,7 +85,7 @@
         <h3 class="navbarColor">Németh Gábor Hangszerbolt 2024</h3>
     </footer>
 
-    
+
     <script src="login.js"></script> <!-- Bejelentkezési logika -->
     <script src="details.js"></script> <!-- Gitár részleteit kezelő logika -->
 

@@ -3,11 +3,13 @@
 $cfg = array();
 
 //Adatbázis konfigurációs beállítások
-$cfg["dbhost"] = "localhost";
-$cfg["dbdb"] = "guitars";
+$cfg["dbhost"] = "mysql.rackhost.hu";
+$cfg["dbdb"] = "c53281guitars";
 $cfg["port"] = 3306;
-$cfg["user"] = "root";
-$cfg["pass"] = "";
+$cfg["user"] = "c53281guitarapi";
+$cfg["pass"] = "OzzyMotorhead666";
+
+
 
 //REST beállítások
 $cfg["procparam"] = "method";

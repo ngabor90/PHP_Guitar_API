@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const storenoSelect = document.getElementById('storeno');
 
     // Store No értékek lekérése a backendből
-    fetch('http://localhost/SzakkepesitoVizsga/index.php?method=getstorenos')
+    fetch('https://guitarapi.eu/index.php?method=getstorenos')
         .then(response => response.json())
         .then(data => {
             if (data.error) {
@@ -43,7 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
             storeno: document.getElementById('storeno').value
         };
 
-        const apiUrl = 'http://localhost/SzakkepesitoVizsga/index.php?method=setguitar';
+        const apiUrl = 'https://guitarapi.eu/index.php?method=setguitar';
 
         fetch(apiUrl, {
             method: 'POST',

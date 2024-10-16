@@ -11,11 +11,25 @@ nav {
 }
 
 .navbarBg {
-    background-color: #312c2c;
+    background-color: #0a0a0a;
 }
 
-.navbarColor {
-    color: #bbbbbb !important;
+/* Mobil nézetben a nav-linkeket középre igazítja */
+.navbar-nav {
+    width: 100%;
+    justify-content: center; /* Mobilon középre igazít */
+}
+
+/* Desktop nézetben jobbra igazítás */
+@media (min-width: 992px) {
+    .navbar-nav {
+        justify-content: flex-end; /* Nagyobb képernyőkön jobbra igazítás */
+    }
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    /* Ez fehérre változtatja a hamburger ikont */
 }
 
 .pDetails {
